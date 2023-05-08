@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="utf-8">
+	<title>Bar Fiolentina | TOP</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="robots" content="noindex,nofollow">
+	<meta name="description" content="これはHTMLCSS の課題作品です。">
+	<link rel="shortcut icon" href="images/favicon.ico" type="image/ico">
+	<link rel="stylesheet" href="css/layout.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet"> <!-- ページの情報ここまで -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header>
+			<div class="icon">
+				<p><img src="images/icon.png" alt="icon"></p>
+				<h1>Bar Fiorentina</h1>
+			</div>
+
+			<div class="hamburger-menu">
+				<!--   ボタンが押されたかどうかをチェックボックスで判断する -->
+				<input type="checkbox" id="menu-btn-check">
+				<!--     ハンバーガーボタン -->
+				<label for="menu-btn-check" class="menu-btn"><span></span></label>
+				<!--メニュー-->
+				<div class="menu-content">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="menu.html">Menu</a></li>
+						<li><a href="delivery.html">Delivery</a></li>
+						<li><a href="access.html">Access</a></li>
+					</ul>
+				</div><!-- /menu-content -->
+			</div><!-- /hamburger-menu -->
+
+
+			<nav class="navigation">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="menu.html">Menu</a></li>
+					<li><a href="delivery.html">Delivery</a></li>
+					<li><a href="access.html">Access</a></li>
+				</ul>
+			</nav>
+		</header>
+	</div>
+	<main>
+
+
+		<div class="header-image">
+			<p>Deliveryサービス</p>
+		</div>
+		<div class="main-delivery wrapper">
+
+			<div id="delivery-side">
+
+				<h2>冷凍ピッツァ</h2>
+				<div class="delivery-pizza-list">
+					<div class="delivery-content-margherita">
+						<img src="images/noimage.jpg" alt="" class="item-image">
+						<h3>マルゲリータ</h3>
+						<p>1050</p>
+						<div class="to-cart"><a href="" id="btn-margherita">Add to cart</a></div>
+					</div>
+
+					<div class="delivery-content-siciliana">
+						<img src="images/noimage.jpg" alt="" class="item-image">
+						<h3>シチリアーナ</h3>
+						<p>1150</p>
+						<div class="to-cart"><a href="#" id="btn-siciliana">Add to cart</a></div>
+					</div>
+
+					<div class="delivery-content-marinara">
+						<img src="images/noimage.jpg" alt="" class="item-image">
+						<h3>マリナーラ</h3>
+						<p>850</p>
+						<div class="to-cart"><a href="#" id="btn-marinara">Add to cart</a></div>
+					</div>
+
+					<div class="delivery-content-tuttifrutti">
+						<img src="images/noimage.jpg" alt="" class="item-image">
+						<h3>Tutti-frutti</h3>
+						<p>1600</p>
+						<div class="to-cart"><a href="#" id="btn-tuttifrutti">Add to cart</a></div>
+					</div>
+				</div>
+
+
+				<div class="delivery-sidemenu">
+					<h2>サイドメニュー</h2>
+					<div class="delivery-sidemenu-list">
+						<div class="delivery-content-focaccia">
+							<img src="images/noimage.jpg" alt="" class="item-image">
+							<h3>フォカッチャ</h3>
+							<p>500</p>
+							<div class="to-cart"><a href="#" id="btn-focaccia">Add to cart</a></div>
+						</div>
+
+						<div class="delivery-content-arancini">
+							<img src="images/noimage.jpg" alt="" class="item-image">
+							<h3>アランチーニ</h3>
+							<p>650</p>
+							<div class="to-cart"><a href="#" id="btn-arancini">Add to cart</a></div>
+						</div>
+
+					</div>
+				</div>
+
+
+
+			</div>
+
+			<aside class="delivery-aside">
+
+				<div id="cart-subtotal">
+					<p id="delivery-aside-pcs">数量：</p>
+					<p id="delivery-aside-sum">合計：</p>
+				</div>
+				<div class="button">
+					<a href="order.html" id="btn-payment-page">カート確認へ
+						<span><img src="images/carticon.png" alt="carticon">
+						</span></a>
+				</div>
+
+			</aside>
+		</div>
+
+	</main>
+
+	<a href="#" id="page-top">TOP</a>
+
+	<footer>
+		<small>&copy; YM sapori S.p.A</small>
+	</footer>
+	<script src="./js/cookie.js"></script>
+
+	<script src="./js/app.js"></script>
+
+</body>
+
+</html>

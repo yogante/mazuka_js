@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+	<meta charset="utf-8">
+	<title>Bar Fiolentina | TOP</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="robots" content="noindex,nofollow">
+	<meta name="description" content="これはHTMLCSS の課題作品です。">
+	<link rel="shortcut icon" href="images/favicon.ico" type="image/ico">
+	<link rel="stylesheet" href="css/layout.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet"> <!-- ページの情報ここまで -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header>
+			<div class="icon">
+				<p><img src="images/icon.png" alt="icon"></p>
+				<h1>Bar Fiorentina</h1>
+			</div>
+
+			<div class="hamburger-menu">
+				<!--   ボタンが押されたかどうかをチェックボックスで判断する -->
+				<input type="checkbox" id="menu-btn-check">
+				<!--     ハンバーガーボタン -->
+				<label for="menu-btn-check" class="menu-btn"><span></span></label>
+				<!--メニュー-->
+				<div class="menu-content">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="menu.html">Menu</a></li>
+						<li><a href="delivery.html">Delivery</a></li>
+						<li><a href="access.html">Access</a></li>
+					</ul>
+				</div><!-- /menu-content -->
+			</div><!-- /hamburger-menu -->
+
+
+			<nav class="navigation">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="menu.html">Menu</a></li>
+					<li><a href="delivery.html">Delivery</a></li>
+					<li><a href="access.html">Access</a></li>
+				</ul>
+			</nav>
+		</header>
+	</div>
+
+	<main>
+		<div class="header-image">
+			<p>Ciao, a tutti! Ciao, Osaka!!</p>
+		</div>
+
+
+
+		<div class="first-container-notice wrapper">
+
+
+			<div class="first-container-notice-text">
+				<h3>NEWS：冷凍ピッツァのデリバリーをはじめました！</h3>
+
+				<div class="first-container-delivery wrapper">
+					<div class="first-container-image-box">
+						<img src="images/bakery.jpg" alt="italian-cafe-bar">
+						<img src="images/panini.jpg" alt="italian-cafe-bar">
+						<img src="images/pizza.jpg" alt="italian-cafe-bar">
+					</div>
+
+					<!-- <p>
+						<input type="range" id="slide_speed" value="2000" min="100" max="10000">
+					</p> -->
+				</div>
+
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse iure natus, dolor sequi amet doloribus
+					reiciendis totam repellat laboriosam delectus recusandae suscipit dolore. Architecto quia voluptatem ullam,
+					vitae asperiores quis.
+				</p>
+				<div class="button"><a href="delivery.html">Delivery</a></div>
+			</div>
+		</div>
+
+		<div class="first-container wrapper">
+			<div class="first-container-text">
+				<h3>Concept</h3>
+				<p>イタリアのバールは、軽食も食べられるようなカフェであると同時にお酒も取り扱われ、イタリア人にとっては欠かせない存在です。
+					大阪でフィレンツェのバールの雰囲気を再現しましたのででお試しあれ！
+				</p>
+				<div class="button"><a href="menu.html">Menu</a></div>
+			</div>
+			<img src="images/italian_rest3.jpg" alt="italian-cafe-bar">
+		</div>
+
+		<div class="second-container wrapper">
+			<h3>オーガニック食材パートナーの紹介</h3>
+
+		</div>
+		<div class="second-container-shop wrapper">
+
+			<div class="second-container-bakery">
+				<h4>Coletti ベーカリー</h4>
+				<img src="images/bakery.jpg" alt="bakery">
+				<p>カナダ産の小麦粉「アヴァロン」を使用し、外はカリッとし、歯切れの良い食感に仕上げてます。プロシュートについてくるパン、それにパニーニはColetti ベーカリーさんのもので信頼できるパンです。</p>
+				<span><a href="#">www.colettibakery.it</a></span>
+			</div>
+			<div class="second-container-cheese">
+				<h4>ピッコリ牧場</h4>
+				<img src="images/cheese.jpg" alt="cheese">
+				<p>岡山県美作郡にある広大な牧場のジャージー牛のチーズで、フレッシュでコクのあるリコッタチーズとモッツァレラチーズ、ハードタイプは12ヶ月熟成のパルメザンチーズを利用しております。</p>
+				<span><a href="#">www.caseificiopiccoli.it</a></span>
+			</div>
+			<div class="second-container-farmer">
+				<h4>野々村ファーマー</h4>
+				<img src="images/farmer.jpg" alt="farmer">
+				<p>淡路島の有機農業生産でさまざまなイタリア野菜の生産されており、弊店のほとんどの野菜を仕入れております。</p>
+				<span><a href="#">www.nono-farm.jp</a></span>
+			</div>
+		</div>
+
+
+	</main>
+	<a href="#" id="page-top">TOP</a>
+
+	<footer>
+		<small>&copy; YM sapori S.p.A</small>
+	</footer>
+	<script src="./js/app.js">
+
+	</script>
+
+
+
+</body>
+
+</html>

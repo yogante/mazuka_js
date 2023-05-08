@@ -1,0 +1,779 @@
+@charset "utf-8";
+
+* {
+	box-sizing: border-box;
+}
+
+a {
+	color: #517573;
+	text-decoration: none;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+figure {
+	margin: 0;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+ul {
+	padding: 0;
+	list-style-type: none;
+}
+
+img {
+	max-width: 100%;
+}
+
+body {
+	background-color: #f5f0e9;
+}
+
+header {
+	height: 80px;
+	width: 100%;
+	display: flex;
+	border-bottom: 3px solid #b82525;
+	background: #f5f0e9;
+	align-items: center;
+	position: fixed;
+	z-index: 999;
+	top: 0;
+	left: 0;
+}
+
+.wrapper,
+.first-container,
+.second-container {
+	max-width: 980px;
+	margin: 0 auto;
+}
+
+.icon {
+	display: flex;
+	justify-content: center;
+	margin-left: 5px;
+}
+
+.wrapper header p {
+	width: 45px;
+	height: 45px;
+}
+
+h1 {
+	font-size: 40px;
+	margin-left: 20px;
+	margin-top: 5px;
+	font-family: 'Great Vibes', cursive;
+}
+
+.navigation {
+	position: fixed;
+	z-index: 999;
+	top: 30px;
+	right: 10px;
+}
+
+.navigation ul {
+	display: flex;
+}
+
+
+
+.navigation ul li {
+	margin: 0 10px;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 20px;
+}
+
+.navigation ul li:hover {
+	text-decoration: underline;
+}
+
+
+.hamburger-menu {
+	display: none;
+}
+
+
+.header-image {
+	background-image: url(../images/italian_rest1.jpg);
+	margin-top: 80px;
+	height: 300px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.header-image p {
+	color: white;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 30px;
+	font-weight: bold;
+	text-align: center;
+	text-shadow: 3px 3px 10px #543822;
+}
+
+.first-container-delivery {
+	justify-content: center;
+}
+
+
+.first-container-delivery {
+	justify-content: center;
+	width: 100%;
+	height: 360px;
+	padding: 30px 60px;
+	position: relative;
+}
+
+.first-container-delivery img {
+	position: absolute;
+	opacity: 0;
+	transition: all 1s ease-in-out;
+	object-fit: cover;
+	width: 720px;
+	height: 240px;
+	border-radius: 30px;
+}
+
+
+.first-container-delivery p {
+	position: absolute;
+	left: 100px;
+	top: 280px;
+	line-height: 1.8;
+
+}
+
+.first-container-notice {
+
+	margin: 30px auto;
+}
+
+.first-container-notice-text {
+	width: 100%;
+}
+
+
+.first-container {
+	display: flex;
+	justify-content: space-between;
+	margin: 60px auto;
+}
+
+
+
+.first-container img {
+	width: 30%;
+}
+
+.first-container-text {
+	width: 65%;
+}
+
+.first-container-text p {
+	text-align: justify;
+	line-height: 1.8;
+}
+
+.second-container {
+	margin: 30px auto;
+}
+
+.second-container-shop {
+	display: flex;
+	justify-content: space-between;
+	margin: 30px auto;
+}
+
+.second-container h3 {
+	margin-top: 30px;
+	font-family: 'Montserrat', sans-serif;
+
+}
+
+.second-container-shop h4 {
+	font-size: 20px;
+	text-align: center;
+	margin-bottom: 5px;
+	border-bottom: 2px solid #999;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.second-container-shop p {
+	margin: 30px auto;
+	text-align: justify;
+	line-height: 1.8;
+
+}
+
+.second-container-bakery {
+	width: 30%;
+}
+
+.second-container-cheese {
+	width: 30%;
+}
+
+.second-container-farmer {
+	width: 30%;
+}
+
+.button {
+	display: block;
+	width: 180px;
+	height: 40px;
+	color: white;
+	background-color: #543822;
+	border-radius: 10px;
+	margin: 25px auto;
+	box-shadow: 1px 1px 3px 2px #999;
+	padding-top: 6px;
+	transition: all 0.5s ease-in-out;
+}
+
+.button:hover {
+	background-color: #b82525;
+	box-shadow: none;
+
+}
+
+.button a {
+	display: block;
+	height: 100%;
+	text-align: center;
+	text-decoration: none;
+	color: white;
+}
+
+h3 {
+	margin-bottom: 30px;
+	border-bottom: 2px dotted #999;
+}
+
+footer {
+	height: 30px;
+	background-color: #543822;
+	text-align: center;
+	border-top: #517573 2px bold;
+	color: white;
+	margin-top: 60px;
+}
+
+#page-top {
+	position: fixed;
+	right: 5px;
+	bottom: 40px;
+	height: 50px;
+	text-decoration: none;
+	font-weight: bold;
+	transform: rotate(90deg);
+	font-size: 90%;
+	line-height: 1.5rem;
+	color: #737373;
+	padding: 0 0 0 25px;
+	border-top: solid 1px;
+}
+
+#page-top::before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: -1px;
+	left: 0px;
+	width: 15px;
+	border-top: solid 1px;
+	transform: rotate(35deg);
+	transform-origin: left top;
+}
+
+/***トップへ戻るボタンここまで***/
+
+/* 　MENUページ　　　　　　　　　　　　
+　　　　　　　　　　　　　　　　について */
+
+.food h2 {
+	font-size: 30px;
+	margin: 25px auto;
+	font-family: 'Montserrat', sans-serif;
+
+}
+
+.item {
+	display: flex;
+	flex-direction: row;
+	margin: 5px 5 px;
+}
+
+.item img {
+	height: 110px;
+	width: 110px;
+	border-radius: 50%;
+	margin-right: 10px;
+	box-shadow: 3px 3px 5px #333;
+}
+
+item-content {
+	width: 70%;
+}
+
+.food-item-list {
+	display: grid;
+	gap: 50px;
+	grid-template-columns: repeat(2, minmax(200px, 1fr));
+	margin: 10px 30px 30px;
+}
+
+#contact-input {
+	text-align: left;
+	width: 100%;
+
+}
+
+#contact-input tr {
+	height: 35px;
+}
+
+.drink-table {
+	margin: 15px;
+	width: calc(100% - 30px);
+}
+
+.drink-table tr {
+	height: 35px;
+}
+
+.contact-button {
+	display: inline;
+	text-align: center;
+	width: 80px;
+	height: 20px;
+	color: white;
+	background-color: #2bcef7;
+	border-color: #2bcef7;
+	border-radius: 5px;
+	margin: 3px auto;
+
+}
+
+/*Delivery page
+------------------------------------------*/
+
+
+.main-delivery {
+	display: flex;
+	justify-content: space-between;
+	margin: 30px auto;
+	position: relative;
+}
+
+#delivery-side {
+	width: 80%;
+}
+
+
+
+#delivery-side h2 {
+	margin-bottom: 15px;
+	border-bottom: 2px dotted #999;
+}
+
+#delivery-side h3 {
+	margin-bottom: 15px;
+	border-bottom: none;
+
+}
+
+
+.delivery-pizza-list {
+	display: flex;
+	justify-content: space-evenly;
+	margin-bottom: 40px;
+}
+
+.delivery-pizza-list img {
+	margin-bottom: 15px;
+}
+
+
+.delivery-sidemenu-list {
+	display: flex;
+	justify-content: space-evenly;
+	margin-bottom: 40px;
+}
+
+
+.delivery-aside {
+	width: 160px;
+	height: 240px;
+	border-radius: 5px;
+	border: 1px solid #333;
+	background-color: #ffffff;
+	position: sticky;
+	top: 90px;
+	right: 5px;
+	opacity: 0.8;
+	box-shadow: 1px 1px 1px 1px #999;
+
+}
+
+#cart-subtotal {
+	padding: 20px 5px;
+}
+
+#delivery-aside-pcs {
+	margin-bottom: 5px;
+
+}
+
+.delivery-aside .button {
+	width: 140px;
+	height: 30px;
+	padding: 0 auto;
+}
+
+
+
+
+.item-image {
+	height: 110px;
+	width: 110px;
+	border-radius: 50%;
+	margin-right: 10px;
+	box-shadow: 3px 3px 5px #333;
+}
+
+.delivery-sidemenu {
+	width: 50%;
+}
+
+
+#sub-ordered {
+	border-collapse: collapse;
+
+	/*  	display: none;*/
+}
+
+/* ------------------------------------
+　　　　　　　　order.html　　　　　　　*/
+
+.confirm-cart h2 {
+	margin-bottom: 20px;
+}
+
+.sub-ordered-table {
+	width: 700px;
+	font-size: 1.2rem;
+	line-height: 3;
+	text-align: center;
+	border-collapse: collapse;
+}
+
+.sub-ordered-table th {
+	background-color: #543822;
+	color: #fff;
+
+}
+
+
+/* Access
+=======================*/
+
+.access {
+	background-color: #d0d0d0;
+	padding: 5px;
+	margin-top: 10px;
+}
+
+.access h2 {
+	margin-top: 15px;
+}
+
+.contact-table {
+	margin: 0 30px;
+	width: 80%;
+}
+
+#contact-input {
+	text-align: left;
+	width: 100%;
+
+}
+
+#contact-input tr {
+	height: 35px;
+}
+
+
+
+
+input[type="submit"] {
+	margin-right: 15px;
+}
+
+#message {
+	width: 90%;
+}
+
+#contact-input td:nth-of-type(1) {
+	min-width: 120px;
+}
+
+#contact-input tr:nth-of-type(5) {
+	text-align: center;
+}
+
+/* Googlemap */
+
+.location {
+	margin: 15px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.adress {
+	width: 40%;
+}
+
+.googlemap {
+	width: 60%;
+}
+
+iframe {
+	width: 100%;
+}
+
+/* ------------------------------------
+　　　　　　　　レスポンシブサイト　　　　　　　*/
+
+@media(max-width: 600px) {
+	.wrapper header {
+		width: 100%;
+		text-align: center;
+	}
+
+	.icon {
+		justify-content: left;
+		margin-left: 5px;
+
+	}
+
+	.navigation {
+		display: none;
+	}
+
+	.hamburger-menu {
+		display: block;
+	}
+
+	/* =================
+ハンバーガーボタンの実装
+================= */
+
+
+	.menu-btn {
+		position: fixed;
+		top: 20px;
+		right: 10px;
+		display: flex;
+		height: 50px;
+		width: 50px;
+		justify-content: center;
+		align-items: center;
+		z-index: 90;
+		background-color: #543822;
+		border-radius: 3px;
+	}
+
+	.menu-btn:hover {
+		cursor: pointer;
+	}
+
+
+
+	/* 三本線の実装 */
+	.menu-btn span,
+	.menu-btn span:before,
+	.menu-btn span:after {
+		content: "";
+		display: block;
+		height: 3px;
+		width: 25px;
+		border-radius: 3px;
+		background-color: #ffffff;
+		position: absolute;
+	}
+
+	.menu-btn span:before {
+		bottom: 8px;
+	}
+
+	.menu-btn span:after {
+		top: 8px;
+	}
+
+	/* チェックボックスを非表示にする */
+	#menu-btn-check {
+		display: none;
+	}
+
+	#menu-btn-check:checked~.menu-btn span {
+		background-color: rgba(255, 255, 255, 0);
+		/*メニューオープン時は真ん中の線を透明にする*/
+	}
+
+	/* メニューを開いている時はハンバーガーボタンが×になる */
+	#menu-btn-check:checked~.menu-btn span::before {
+		bottom: 0;
+		transform: rotate(45deg);
+	}
+
+	#menu-btn-check:checked~.menu-btn span::after {
+		top: 0;
+		transform: rotate(-45deg);
+	}
+
+	/* =================
+メニュー部分の実装
+================= */
+
+	.menu-content {
+		width: 80%;
+		height: 240px;
+		position: fixed;
+		top: 0;
+		/* メニューを外に出しておく */
+		left: 100%;
+
+		z-index: 80;
+		background-color: rgba(229, 232, 236, 0.9);
+		transition: all 0.5s;
+		/*アニメーションを滑らかにする*/
+	}
+
+	.menu-content ul {
+		padding: 70px 10px 0;
+	}
+
+	.menu-content ul li {
+		border-bottom: solid 1px #517573;
+		list-style: none;
+	}
+
+	.menu-content ul li a {
+		display: block;
+		width: 100%;
+		font-size: 20px;
+		box-sizing: border-box;
+		text-decoration: none;
+		padding: 10px 15px 10px 0;
+		position: relative;
+	}
+
+	#menu-btn-check:checked~.menu-content {
+		left: 30%;
+		/*メニューを画面内へ動かす*/
+	}
+
+	.first-container,
+	.second-container {
+		display: block;
+		width: 100%;
+	}
+
+	.first-container-text {
+		width: 100%;
+	}
+
+	.first-container img {
+		width: 100%;
+	}
+
+	.second-container-text {
+		width: 100%;
+	}
+
+	.second-container img {
+		width: 100%;
+	}
+
+	.second-container-shop {
+		display: block;
+		width: 100%;
+	}
+
+	.second-container-bakery {
+		width: 100%;
+	}
+
+	.second-container-cheese {
+		width: 100%;
+	}
+
+	.second-container-farmer {
+		width: 100%;
+	}
+
+	/* menuページ　Responsive */
+
+	.item {
+		display: block;
+		flex-direction: column;
+		margin: 20px 5px;
+	}
+
+	.food-item-list {
+		display: inline-block;
+		text-align: center;
+		margin: 10px 30px 30px;
+	}
+
+
+
+	.item img {
+		height: 250px;
+		width: 250px;
+		border-radius: 50%;
+		margin: 5px auto;
+		text-align: center;
+	}
+
+	.drink-table {
+		margin: 0 auto;
+		width: 100%;
+	}
+
+	/* access レスポンシブ　 */
+
+
+	.contact-table {
+		width: 100%;
+		margin: 0;
+	}
+
+	.location {
+		display: block;
+	}
+
+	.googlemap {
+		width: 100%;
+	}
+
+	.address {
+		width: 100%;
+	}
+}
+
+/* responsive おわり */

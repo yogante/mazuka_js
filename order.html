@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="utf-8">
+	<title>Bar Fiolentina | TOP</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="robots" content="noindex,nofollow">
+	<meta name="description" content="これはHTMLCSS の課題作品です。">
+	<link rel="shortcut icon" href="images/favicon.ico" type="image/ico">
+	<link rel="stylesheet" href="css/layout.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet"> <!-- ページの情報ここまで -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header>
+			<div class="icon">
+				<p><img src="images/icon.png" alt="icon"></p>
+				<h1>Bar Fiorentina</h1>
+			</div>
+
+			<div class="hamburger-menu">
+				<!--   ボタンが押されたかどうかをチェックボックスで判断する -->
+				<input type="checkbox" id="menu-btn-check">
+				<!--     ハンバーガーボタン -->
+				<label for="menu-btn-check" class="menu-btn"><span></span></label>
+				<!--メニュー-->
+				<div class="menu-content">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="menu.html">Menu</a></li>
+						<li><a href="delivery.html">Delivery</a></li>
+						<li><a href="access.html">Access</a></li>
+					</ul>
+				</div><!-- /menu-content -->
+			</div><!-- /hamburger-menu -->
+
+
+			<nav class="navigation">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="menu.html">Menu</a></li>
+					<li><a href="delivery.html">Delivery</a></li>
+					<li><a href="access.html">Access</a></li>
+				</ul>
+			</nav>
+		</header>
+	</div>
+	<main>
+
+
+		<div class="header-image">
+			<p>Deliveryサービス</p>
+		</div>
+		<div class="main-delivery wrapper">
+			<div class="confirm-cart">
+				<h2>カート内の確認</h2>
+				<div>
+					<table border="1" class="sub-ordered-table">
+						<tr>
+							<th>品名</th>
+							<th>価格</th>
+							<th>数量</th>
+							<th>小計</th>
+							<th></th>
+						</tr>
+						<tbody id="sub-ordered">
+							<tr>
+								<th colspan="2"></th>
+								<th>合計</th>
+								<th id="delivery-aside-sum2"></th>
+								<th></th>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+
+			<aside class="delivery-aside">
+
+
+				<div id="cart-subtotal">
+					<p id="delivery-aside-pcs">数量：</p>
+					<p id="delivery-aside-sum">合計：</p>
+				</div>
+				<div class="button">
+					<a href="delivery.html">選択ページへ</a>
+				</div>
+				<div class="button">
+					<a href="#">お支払い</a>
+				</div>
+		</div>
+		</aside>
+		</div>
+	</main>
+
+	<a href="#" id="page-top">TOP</a>
+
+	<footer>
+		<small>&copy; YM sapori S.p.A</small>
+	</footer>
+
+	<script src="./js/cookie.js"></script>
+	<script src="./js/app.js"></script>
+	<script>
+		'use strict';
+
+		window.onload = function () {
+			const _cartInside = localStorage.getItem('cartInside');
+			const cartInside = JSON.parse(_cartInside);
+			console.log(cartInside);
+			enteringData(cartInside);
+
+			let tr = '';
+			let item = 0;
+			for (item of cartInside) {
+				tr = tr + `<tr>`;
+				for (let p in item) {
+					tr = tr + `<td>${item[p]}</td>`
+				}
+				tr = tr + `<td>${priceSubtotal(item)}</td><td><a href="javascript:removeItem(item)">削除</a></td></tr>`;
+			}
+
+			document.getElementById('sub-ordered').insertAdjacentHTML('afterbegin', tr);
+			document.getElementById('delivery-aside-sum2').textContent = `${priceTotal(cartInside)}`;
+
+
+		}
+
+
+		function removeItem(item) {
+			cartInside.splice(cartInside[item], 1);
+			return loadItem(cartInside);
+		}
+
+		function loadItem(cartInside) {
+			enteringData(cartInside);
+			let tr = '';
+			let item = 0;
+			for (item of cartInside) {
+				tr = tr + `<tr>`;
+				for (let p in item) {
+					tr = tr + `<td>${item[p]}</td>`
+				}
+				tr = tr + `<td>${priceSubtotal(item)}</td><td><a href="javascript:removeItem(item)"></a>削除</td></tr>`;
+			}
+			document.getElementById('sub-ordered').insertAdjacentHTML('afterbegin', tr);
+			document.getElementById('delivery-aside-sum2').textContent = `${priceTotal(cartInside)}`;
+		}
+
+
+	</script>
+
+</body>
+
+</html>
